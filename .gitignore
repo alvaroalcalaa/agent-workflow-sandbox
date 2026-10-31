@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+report.json
+report.html
+blocked.json
+blocked.html
