@@ -1,0 +1,9 @@
+{
+  "max_parallel": 2,
+  "tasks": [
+    {"id": "design", "duration": 2},
+    {"id": "art", "duration": 4, "depends_on": ["design"]},
+    {"id": "lint", "duration": 1, "depends_on": ["design"], "outcomes": ["error"], "max_attempts": 2, "retry_delay": 2},
+    {"id": "package", "duration": 1, "depends_on": ["art", "lint"]}
+  ]
+}
